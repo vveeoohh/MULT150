@@ -7,17 +7,15 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float health, poisonDamage;
+        float health = 1004f;
+        float poisonDamage = 125.5f;
 
-        health = 1004f;
-        poisonDamage = 125.5f;
-        Debug.Log(health);
-        while (health > 0){
-            health -= poisonDamage;
+        while (health > 0)
+        {
+            health = health - poisonDamage;
             Debug.Log(health);
-
         }
-        if (health = 0)
+        if (health <= 0)
         {
             Debug.Log("Player has been unalived!");
         }
